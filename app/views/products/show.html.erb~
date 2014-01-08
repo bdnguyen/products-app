@@ -1,0 +1,28 @@
+<h1>Submitted product</h1>
+<p>
+  <strong>Title:</strong>
+  <%=h @product.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%=h @product.description %>
+</p>
+
+<p>
+  <strong>Is it good?</strong>
+  <%=h @product.option %>
+</p>
+
+<p>
+  <strong>Category 1:</strong>
+  <%=h @product.category1 %>
+  <strong>Category 2:</strong>
+  <%=h @product.category2 %>
+</p>
+
+<h2>Comments</h2>
+<%= render "comments/comment" %>
+<h2>Add a comment</h2>
+<%= render "comments/form" %>
+<%= link_to 'Back', products_path %>

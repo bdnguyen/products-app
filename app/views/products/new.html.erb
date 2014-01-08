@@ -1,0 +1,33 @@
+<h1>New Product</h1>
+<%= form_for :product, url: products_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%=h f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br>
+    <%=h f.text_area :description, size:"30x6" %>
+  </p>  
+  <p>
+    Is it good?
+    <br>
+    <%= f.label :radio1, "Yes" %>
+    <%= f.radio_button :option, "Yes" %>
+    <%= f.label :radio2, "No" %>
+    <%= f.radio_button :option, "No" %>
+    <%= f.label :radio3, "Ask my cat" %>
+    <%= f.radio_button :option, "Ask my cat", :checked => true %>
+  </p>  
+  <p>
+    <%= f.label :checkbox1, "Category 1" %>
+    <%= f.check_box :category1 %>
+    <%= f.label :checkbox2, "Category 2" %>
+    <%= f.check_box :category2 %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+ <% end %>
+ 
+ <%= link_to 'Back', products_path %> 
